@@ -1,0 +1,9 @@
+__mocks__
+.cache
+coverage
+node_modules
+public
+gatsby-browser.js
+gatsby-config.js
+gatsby-node.js
+gatsby-ssr.js
