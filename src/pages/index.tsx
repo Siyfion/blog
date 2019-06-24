@@ -5,7 +5,7 @@ import { RouteComponentProps } from '@reach/router'
 import { useStaticQuery, graphql as gql } from 'gatsby'
 
 import SEO from '../components/seo'
-import { Theme } from '../styles/theme';
+import { Theme } from '../styles/theme'
 
 const BackgroundContainer = styled(BackgroundImage)({
   width: '100% !important',
