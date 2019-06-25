@@ -11,11 +11,17 @@ const LayoutContainer = styled.div({
   display: 'grid',
   gridTemplateColumns: 'auto 3fr',
   gridTemplateRows: '1fr auto',
+  gridTemplateAreas: `'sidebar content' 'footer footer'`,
 
   '@media (max-width: 650px)': {
     gridTemplateColumns: '1fr',
     gridTemplateRows: 'auto 1fr auto',
+    gridTemplateAreas: `'sidebar' 'content' 'footer'`,
   },
+})
+
+const Content = styled.div({
+  gridArea: 'content',
 })
 
 const Layout: React.FC = ({ children }) => {
@@ -35,7 +41,7 @@ const Layout: React.FC = ({ children }) => {
       />
       <LayoutContainer>
         <Sidebar />
-        {children}
+        <Content>{children}</Content>
         <Footer />
       </LayoutContainer>
     </>

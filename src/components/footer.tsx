@@ -5,7 +5,7 @@ import { Link } from 'gatsby'
 import { Theme } from '../styles/theme'
 
 const FooterContainer = styled.div(({ theme }: { theme: Theme }) => ({
-  gridColumn: '1 / -1',
+  gridArea: 'footer',
   backgroundColor: theme.colors.highlight,
   color: 'white',
   padding: '0.5em 1.5em',

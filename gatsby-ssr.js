@@ -5,13 +5,16 @@
  */
 
 import React from 'react'
-import { ThemeProvider } from 'emotion-theming'
 import PropTypes from 'prop-types'
+import { ThemeProvider } from 'emotion-theming'
 
+import Layout from './src/components/layout'
 import { theme } from './src/styles/theme'
 
-export const wrapRootElement = ({ element }) => {
-  return <ThemeProvider theme={theme}>{element}</ThemeProvider>
+export const wrapPageElement = ({ element }) => {
+  return <Layout>{element}</Layout>
 }
+
+export const wrapRootElement = ({ element }) => <ThemeProvider theme={theme}>{element}</ThemeProvider>
 
 wrapRootElement.propTypes = { element: PropTypes.any }

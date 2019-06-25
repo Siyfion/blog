@@ -4,7 +4,7 @@
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
 
- import React from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import { ThemeProvider } from 'emotion-theming'
 
@@ -15,8 +15,6 @@ export const wrapPageElement = ({ element }) => {
   return <Layout>{element}</Layout>
 }
 
-export const wrapRootElement = ({ element }) => (
-  <ThemeProvider theme={theme}>{element}</ThemeProvider>
-)
+export const wrapRootElement = ({ element }) => <ThemeProvider theme={theme}>{element}</ThemeProvider>
 
 wrapRootElement.propTypes = { element: PropTypes.any }

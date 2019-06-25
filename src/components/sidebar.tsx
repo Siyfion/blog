@@ -7,6 +7,7 @@ import TwitterLogo from '../../content/assets/social_icons/twitter.inline.svg'
 import InstaLogo from '../../content/assets/social_icons/instagram.inline.svg'
 
 const SidebarContainer = styled.div(({ theme }: { theme: Theme }) => ({
+  gridArea: 'sidebar',
   backgroundColor: theme.colors.secondary,
   color: 'white',
   padding: '1em 2em 1em 2em',
