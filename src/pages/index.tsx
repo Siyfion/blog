@@ -11,7 +11,7 @@ const BackgroundContainer = styled(BackgroundImage)({
   width: '100% !important',
   height: '100% !important',
   backgroundRepeat: 'repeat',
-  backgroundSize: '1024px',
+  backgroundSize: '800px',
 })
 
 const HomeContainer = styled.div({
@@ -22,10 +22,11 @@ const HomeContainer = styled.div({
 
 const IntroText = styled.h1(({ theme }: { theme: Theme }) => ({
   display: 'inline-block',
-  padding: '.1em',
+  padding: '.2em',
   fontSize: '4em',
   background: theme.colors.alternate,
   borderRadius: '20px',
+  color: 'white',
 }))
 
 const Home: React.FC<RouteComponentProps> = () => {
@@ -33,7 +34,7 @@ const Home: React.FC<RouteComponentProps> = () => {
     query HomePageQuery {
       file(relativePath: { eq: "stack-tiled.png" }) {
         childImageSharp {
-          fixed(quality: 95, width: 1024) {
+          fixed(quality: 95, width: 800) {
             ...GatsbyImageSharpFixed_withWebp_tracedSVG
           }
         }

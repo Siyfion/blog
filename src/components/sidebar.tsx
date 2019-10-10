@@ -27,6 +27,13 @@ const Logo = styled.h1({
   color: 'white',
 })
 
+const ShowNavButton = styled.button({
+  visibility: 'hidden',
+  '@media (max-width: 650px)': {
+    visibility: 'visible',
+  },
+})
+
 const NavContainer = styled.nav({}, (props: { show: boolean }) => ({
   '@media (max-width: 650px)': {
     display: props.show ? 'block' : 'none',
@@ -91,7 +98,7 @@ const Sidebar: React.FC = () => {
   return (
     <SidebarContainer>
       <Logo>Simon</Logo>
-      <button onClick={() => setShowMenu(!showMenu)}>Show Menu</button>
+      <ShowNavButton onClick={() => setShowMenu(!showMenu)}>Show Menu</ShowNavButton>
       <NavContainer show={showMenu}>
         <NavLink to={'/'}>
           <NavTitle>Home</NavTitle>
